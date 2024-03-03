@@ -1,126 +1,172 @@
-/* Reset some default styles */
+/* Reset some default browser styles */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    line-height: 1.6;
+    background-color: #ffffff;
     color: #333;
 }
 
-header {
-    background-color: #007bff;
-    padding: 20px 0;
-    color: #fff;
-    text-align: center;
+/* header {
+    background-color: hsl(211, 73%, 57%);
+    padding: 10px 0;
+} */
+.span {
+    color:  rgb(3, 3, 3);
+    font-weight: lighter;
 }
-
-nav ul {
-    list-style-type: none;
+a #search {
+    border: 3px solid black;
 }
+/* ul .dropdown-menu {
+    border: 2px solid black;
+} */
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-main {
+.container {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #007bff;
+.container h1{
+    color: rgb(3, 3, 3);
+    font-size: 26px;
+    font-weight: bold;
 }
 
-.categories ul {
+.hero {
+    background: url('hero-image.jpg') center/cover no-repeat;
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.categories li {
-    margin-right: 15px;
-    margin-bottom: 15px;
-}
-
-.categories li a {
-    color: #333;
-    background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.categories li a:hover {
-    background-color: #007bff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: #fff;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
-.project-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.project-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.project-info h3 {
-    margin-bottom: 10px;
-}
-
-.project-info p {
-    color: #888;
-    margin-bottom: 5px;
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 8px 20px;
-    background-color: #007bff;
+    background-color: #17a2b8;
     color: #fff;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #138496;
+}
+
+.how-it-works {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.how-it-works h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.step {
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 16px;
+    color: #555;
+}
+
+.browse-jobs {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.browse-jobs h2 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .step {
+        max-width: 100%;
+    }
 }
