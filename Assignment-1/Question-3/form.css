@@ -113,14 +113,16 @@ tr:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(105deg, #393688, #28408cec, #e44814ec, #464dae);
+    background: linear-gradient(105deg, #5d83b8, #28408cec, #e44814ec, #464dae);
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(transparent, #0c57c6);
+        background: linear-gradient(transparent, #5e80b3);
 }
 
 #applicationsTable {
-    margin-left: -320px;
+    /* margin-left: -320px; */
+    max-height: 400px; /* Adjust this height as needed */
+    overflow-y: auto;
 }
