@@ -5,45 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PeoplePerHour Clone</title>
     <link rel="stylesheet" href="style.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-md bg-light navbar-light">
-                 <div class="container">
-                        
-                        <a href="" class="navbar-brand" style="color: #ad0202;">
-                            <img class="logo" src="favicon.ico" class="d-inline-block align-middle" alt="">   
-                        </a>
-                        <h1 class="navH">people<span class="span">per</span>hour</h1>
-                       
-                        <div class="collapse navbar-collapse" id="nav-menu">
+            <div class="container">
+              <a id="main-logo" href="" class="navbar-brand d-flex align-items-center" style="color: #ad0202;">
+                <img class="logo" src="favicon.ico" class="d-inline-block align-middle" alt=""> 
+                <h1 class="navH m-0 ms-2">people<span class="span">per</span>hour</h1>  
+              </a>
                             
-                            <div class="navbar-nav ms-auto">
-                                <div class="dropdown">
-                                    <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="dropdown__title-search-icon⤍SearchMenu⤚3u9VR"><svg fill="#69728C" width="24" height="24" viewBox="0 0 1024 1024" class=""><path d="M755.499 695.168l128 128c7.41 7.665 11.977 18.12 11.977 29.641 0 23.564-19.103 42.667-42.667 42.667-11.521 0-21.976-4.567-29.653-11.989l0.012 0.012-128-128c-7.41-7.665-11.977-18.12-11.977-29.641 0-23.564 19.103-42.667 42.667-42.667 11.521 0 21.976 4.567 29.653 11.989l-0.012-0.012zM426.667 85.333c188.513 0 341.333 152.82 341.333 341.333s-152.82 341.333-341.333 341.333v0c-188.513 0-341.333-152.82-341.333-341.333s152.82-341.333 341.333-341.333v0zM426.667 170.667c-141.385 0-256 114.615-256 256s114.615 256 256 256v0c141.385 0 256-114.615 256-256s-114.615-256-256-256v0z"></path></svg></span><span>Search</span>
-                                    </a>
-                                  
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                      <li><a class="dropdown-item" href="#">Action</a></li>
-                                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                  </div> 
-                                <a href="" class="nav-link active">Log In</a>
-                                <a href="" class="nav-link active">Sign Up</a>
-                                <a href="" class="nav-link active">Freelancer?</a>
-                            </div>
-                        </div>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                
+              <div class="collapse navbar-collapse" id="nav-menu">
+                <div class="navbar-nav ms-auto">
+                  <div class="dropdown">
+                    <a id="navBtn" class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="dropdown__title-search-icon⤍SearchMenu⤚3u9VR"><svg id="svgIc" fill="#69728C" width="24" height="24" viewBox="0 0 1024 1024" class=""><path d="M755.499 695.168l128 128c7.41 7.665 11.977 18.12 11.977 29.641 0 23.564-19.103 42.667-42.667 42.667-11.521 0-21.976-4.567-29.653-11.989l0.012 0.012-128-128c-7.41-7.665-11.977-18.12-11.977-29.641 0-23.564 19.103-42.667 42.667-42.667 11.521 0 21.976 4.567 29.653 11.989l-0.012-0.012zM426.667 85.333c188.513 0 341.333 152.82 341.333 341.333s-152.82 341.333-341.333 341.333v0c-188.513 0-341.333-152.82-341.333-341.333s152.82-341.333 341.333-341.333v0zM426.667 170.667c-141.385 0-256 114.615-256 256s114.615 256 256 256v0c141.385 0 256-114.615 256-256s-114.615-256-256-256v0z"></path></svg></span>
+                      <span>Search</span>
+                    </a>
+                      
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropList">Buyers Can</li>
+                      <li><a class="dropdown-item" href="#">Search <span class="span1"> Offers </span></a></li>
+                      <hr>
+                      <li><a class="dropdown-item" href="#">Search <span class="span1"> Freenlancers </span></a></li>
+                      <li class="dropList">Freelancers Can</li>
+                      <li><a class="dropdown-item" href="#">Search <span class="span1"> Projects </span></a></li>
+                    </ul>
+                  </div> 
+                  
+                  <a id="nvL" href="" class="nav-link active">How It Works</a>
+                  <a id="nvL" href="" class="nav-link active">Log In</a>
+                  <a id="nvL" href="" class="nav-link active">Sign Up</a>
+                  <a id="nvL" href="" class="nav-link active"> <span style="color: #FF7300;"> Freelancer? </span></a>
                 </div>
-        </nav>
-        
+              </div>
+            </div>
+          </nav>
     </header>
 
     <section class="mainStuff">
@@ -60,7 +72,7 @@
                                 <div class="searchArea"> 
                                 <input id="searchPlaceholder" class="form-control me-2" type="search" placeholder="Try &quot;web development&quot;" aria-label="Search">
                                 </div>
-                                <button id="searchBtn"  class="btn btn-danger" type="submit"><svg fill="#69728C" width="24" height="24" viewBox="0 0 1024 1024" class=""><path d="M755.499 695.168l128 128c7.41 7.665 11.977 18.12 11.977 29.641 0 23.564-19.103 42.667-42.667 
+                                <button id="searchBtn"  class="btn btn-danger" type="submit"><svg id="searchSvg" fill="#69728C" width="24" height="24" viewBox="0 0 1024 1024" class=""><path d="M755.499 695.168l128 128c7.41 7.665 11.977 18.12 11.977 29.641 0 23.564-19.103 42.667-42.667 
                                     42.667-11.521 0-21.976-4.567-29.653-11.989l0.012 0.012-128-128c
                                     -7.41-7.665-11.977-18.12-11.977-29.641 0-23.564 19.103-42.667 42.667-42.667 11.521 0 21.976 4.567 29.653
                                     11.989l-0.012-0.012zM426.667 85.333c188.513 0 341.333 152.82 341.333 341.333s-152.82 341.333-341.333 341.333v0c-188.513
@@ -72,10 +84,10 @@
                         <div class="search-elem">
                             <ul class="search-components">
                                 Popular Skills:
-                                <li class="list-elem">logo desgin</li>
-                                <li class="list-elem">illustration</li>
-                                <li class="list-elem">animation</li>
-                                <li class="list-elem">3D design</li>
+                               <a href=""> <li class="list-elem">logo desgin</li></a>
+                               <a href=""> <li class="list-elem">ui/ux design</li></a>
+                               <a href=""> <li class="list-elem">illustration</li></a>
+                               <a href=""> <li class="list-elem">3D design</li></a>
                             </ul>
                         </div>
                     </div>
@@ -91,21 +103,70 @@
         </div>
     </section>
 
-   
+    <section class="MidArea">
+        <div id="midItem" class="container-md">
+           <div class="row align-items-center">
+                <div class="col-md-6 order-2 order-md-1">
+                    <div class="txtAndImg">
+                        <h1>Getting work done has never been easier</h1>
+                        <ul class="checkMark">
+                            <li>Get matched with expert freelancers in minutes</li>
+                            <li>Dedicated 24/7 customer service team</li>
+                            <li>Money back guarantee and anti-fraud protection</li>
+                        </ul>
+                        <button class="midItemBtn">START NOW FOR FREE</button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 order-1 order-md-2">
+                    <div class="image">
+                        <img src="collage.png" alt="Error">
+                    </div>
+                </div>
+           </div>
+        </div>
+
+    </section>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hire Freelancers & Find Freelance Jobs Online</h1>
-                <p>Thousands of small businesses use PeoplePerHour to turn their ideas into reality.</p>
-                <a href="#" class="btn btn-danger">Get Started</a>
-            </div>
+        <div class="card-container">
+            <div id="card-body" class="card">
+                <div class="card-inner">
+                    <p class="card-logo"><span class="testimonial-card__quote-icon⤍TestimonialCard⤚3gRh_"><svg id="svgCard" viewBox="0 0 49 36" xmlns="http://www.w3.org/2000/svg"><path d="m161.640719 36c1.48503-9.8203593 3.880239-21.8203593 7.185628-36h-12.215569c-5.988024 13.2215569-10.251497 24.6946108-12.790419 34.4191617l1.077845 1.5808383zm-24.035929 0c1.772456-11.7365269 4.191617-23.7365269 7.257485-36h-12.215568c-2.586827 5.46107784-5.101797 11.5688623-7.544911 18.3233533-2.443113 6.754491-4.143712 12.1197605-5.101796 16.0958084l.862275 1.5808383z" fill="#29a4d1" transform="translate(-120)"></path></svg></span>
+                    </p>
+                  <p class="card-text">We have built a network of trusted freelancers we can depend on when we need something done.</p>
+                  <p class="img-name"> <img src="img1.png"> Ana Rodriguez</p>
+                </div>
+              </div>
+            
+              <div id="card-body" class="card">
+                <div class="card-inner">
+                  <p class="card-logo"><span class="testimonial-card__quote-icon⤍TestimonialCard⤚3gRh_"><svg id="svgCard" viewBox="0 0 49 36" xmlns="http://www.w3.org/2000/svg"><path d="m161.640719 36c1.48503-9.8203593 3.880239-21.8203593 7.185628-36h-12.215569c-5.988024 13.2215569-10.251497 24.6946108-12.790419 34.4191617l1.077845 1.5808383zm-24.035929 0c1.772456-11.7365269 4.191617-23.7365269 7.257485-36h-12.215568c-2.586827 5.46107784-5.101797 11.5688623-7.544911 18.3233533-2.443113 6.754491-4.143712 12.1197605-5.101796 16.0958084l.862275 1.5808383z" fill="#29a4d1" transform="translate(-120)"></path></svg></span>
+                  </p>
+                  <p class="card-text">The ease of communication and security provided make the process of outsourcing effortless.</p>
+                  <p class="img-name"> <img src="img2.png"> Bronte Aurell </p>
+                </div>
+              </div>      
         </div>
     </section>
 
     <section class="how-it-works">
         <div class="container">
-            <h1>How It Works</h1>
+            <div class="three-Points">
+                <div class="headTxt">
+                    <h1>3 million</h1>
+                    <p>rated freelancers, covering 8,766 skills</p>
+                </div>
+                <div class="headTxt">
+                    <h1>$150 million</h1>
+                    <p>earned by freelancers, with top freelancers earning over $7,000/m</p>
+                </div>
+                <div class="headTxt">
+                    <h1>10 minutes</h1>
+                    <p>to task a freelancer, with 90% of projects completed in 7 days</p>
+                </div>
+            </div>
+
             <div class="steps">
                 <div class="step1">
                     <div class="col-data">
@@ -119,7 +180,14 @@
                 </div>
             </div>
 
-            
+            <div id="logos" class="container-md">
+                <img src="BBC.png" alt="">
+                <img src="bussinessInsider.png" alt="">
+                <img id="cnbc" src="cnbc.png" alt="">
+                <img src="financialTimes.png" alt="">
+                <img src="Forbes.png" alt="">
+                <img src="independentpng.png" alt="">
+            </div>
 
             <div class="steps">
                 <div class="step2">
@@ -141,16 +209,72 @@
         </div>
     </section>
 
-    <section class="browse-jobs">
-        <div class="container">
-            <h2>Browse Jobs</h2>
-            <!-- Add some sample job listings here -->
-        </div>
-    </section>
-
     <footer>
         <div class="container">
-            <p>&copy; 2024 Your Company | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <div class="row align-items-center">
+                    <div id="footerLogo" class="logo__wrapper⤍WhiteLogo⤚vCg-W">
+                        <a href="/" class="logo__link⤍WhiteLogo⤚2loh8"><span class="logo⤍WhiteLogo⤚1CLtr"><svg viewBox="0 0 180 30" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#__b7SFT4G__clip0_152_111)"><path fill-rule="evenodd" clip-rule="evenodd" d="M24.6443 7.941C25.9629 9.91967 26.6667 12.2459 26.6667 14.6257C26.6667 17.8168 25.4024 20.8772 23.152 23.1336C20.9015 25.3901 17.8493 26.6578 14.6667 26.6578C12.2933 26.6578 9.97323 25.9521 7.99984 24.63C6.02644 23.3079 4.48837 21.4287 3.58012 19.2301C2.67187 17.0316 2.43423 14.6123 2.89725 12.2783C3.36028 9.94433 4.50317 7.80042 6.1814 6.1177C7.85963 4.43498 9.99782 3.28904 12.3256 2.82478C14.6534 2.36052 17.0662 2.59879 19.2589 3.50947C21.4516 4.42015 23.3257 5.96233 24.6443 7.941ZM22.7706 2.46487C20.3718 0.857781 17.5516 0 14.6667 0C10.7983 0.000708901 7.0885 1.54185 4.35313 4.28454C1.61775 7.02723 0.0807165 10.7469 0.0800095 14.6257C0.0800095 17.5184 0.935503 20.3461 2.53831 22.7513C4.14111 25.1564 6.41924 27.031 9.0846 28.138C11.75 29.245 14.6829 29.5346 17.5124 28.9703C20.3419 28.406 22.941 27.013 24.981 24.9676C27.021 22.9221 28.4102 20.3161 28.9731 17.479C29.5359 14.6419 29.247 11.7012 28.143 9.02867C27.039 6.35618 25.1694 4.07196 22.7706 2.46487ZM6.14024 9.486C5.83843 9.93889 5.67734 10.4714 5.67734 11.016C5.67699 11.3778 5.7478 11.7361 5.88571 12.0704C6.02362 12.4047 6.22592 12.7084 6.48104 12.9642C6.73616 13.22 7.03909 13.4229 7.37249 13.5611C7.70589 13.6994 8.06321 13.7704 8.42401 13.7701C8.96725 13.7701 9.49829 13.6085 9.94998 13.3059C10.4017 13.0033 10.7537 12.5732 10.9616 12.07C11.1695 11.5667 11.2239 11.013 11.1179 10.4788C11.0119 9.94454 10.7503 9.45382 10.3662 9.06866C9.98207 8.68351 9.49266 8.42121 8.95986 8.31495C8.42706 8.20868 7.87479 8.26322 7.37291 8.47167C6.87102 8.68011 6.44205 9.0331 6.14024 9.486ZM18.4602 9.486C18.1584 9.93889 17.9973 10.4714 17.9973 11.016C17.997 11.3778 18.0678 11.7361 18.2057 12.0704C18.3436 12.4047 18.5459 12.7084 18.801 12.9642C19.0562 13.22 19.3591 13.4229 19.6925 13.5611C20.0259 13.6994 20.3832 13.7704 20.744 13.7701C21.2873 13.7701 21.8183 13.6085 22.27 13.3059C22.7217 13.0033 23.0737 12.5732 23.2816 12.07C23.4895 11.5667 23.5439 11.013 23.4379 10.4788C23.3319 9.94454 23.0703 9.45382 22.6862 9.06866C22.3021 8.68351 21.8127 8.42121 21.2799 8.31495C20.7471 8.20868 20.1948 8.26322 19.6929 8.47167C19.191 8.68011 18.762 9.0331 18.4602 9.486ZM133.959 5.02647C133.917 5.14662 133.903 5.27468 133.917 5.40109V19.3851C133.917 20 134.237 20.3209 134.851 20.3209H135.811C136.424 20.3209 136.744 20 136.744 19.3851V15.0268C136.744 12.861 138.051 11.2567 140.024 11.2567C141.464 11.2567 141.811 12.1925 141.811 13.5829V19.3851C141.811 20 142.131 20.3209 142.744 20.3209H143.704C143.83 20.3354 143.958 20.3212 144.078 20.2793C144.197 20.2374 144.306 20.1689 144.396 20.0789C144.486 19.989 144.554 19.8798 144.596 19.7597C144.638 19.6395 144.652 19.5115 144.637 19.3851V12.9947C144.637 9.97329 143.171 8.66313 140.664 8.66313C139.861 8.65457 139.07 8.8637 138.375 9.26844C137.681 9.67318 137.108 10.2585 136.717 10.9626H136.664C136.719 10.6448 136.746 10.3226 136.744 10V5.40109C136.758 5.27468 136.744 5.14662 136.703 5.02647C136.661 4.90632 136.592 4.79719 136.503 4.70722C136.413 4.61724 136.304 4.54875 136.184 4.50686C136.064 4.46496 135.937 4.45074 135.811 4.46527H134.851C134.725 4.45074 134.597 4.46496 134.477 4.50686C134.357 4.54875 134.248 4.61724 134.159 4.70722C134.069 4.79719 134.001 4.90632 133.959 5.02647ZM152.477 8.66308C155.917 8.66308 158.744 11.1497 158.744 14.6256C158.744 18.1016 155.944 20.5882 152.477 20.5882C149.011 20.5882 146.237 18.1283 146.237 14.6256C146.237 11.123 149.037 8.66308 152.477 8.66308ZM152.477 18.1818C154.317 18.1818 155.864 16.7647 155.864 14.6256C155.864 12.4866 154.317 11.0695 152.477 11.0695C150.637 11.0695 149.117 12.5133 149.117 14.6256C149.117 16.7379 150.637 18.1818 152.477 18.1818ZM173.784 8.93048C173.197 8.93048 172.877 9.25134 172.877 9.86631H172.933V19.385C172.933 20 173.227 20.3209 173.84 20.3209H174.827C175.413 20.3209 175.733 20 175.733 19.385V15.7219C175.733 13.6364 176.72 11.5775 178.8 11.5775C179.413 11.5775 179.76 11.2567 179.76 10.6417V9.75936C179.76 9.14438 179.52 8.82353 178.907 8.82353C177.28 8.82353 176.053 10.3476 175.6 11.7112H175.547C175.582 11.4543 175.6 11.1952 175.6 10.9358V9.86631C175.614 9.7399 175.6 9.61184 175.559 9.49169C175.517 9.37154 175.448 9.26241 175.359 9.17243C175.269 9.08246 175.16 9.01397 175.04 8.97207C174.92 8.93018 174.793 8.91596 174.667 8.93048H173.784ZM160.359 9.4917C160.317 9.61185 160.303 9.73991 160.317 9.86632H160.32V16.2567C160.32 19.3583 161.84 20.5882 164.267 20.5882C165.079 20.5936 165.877 20.3742 166.572 19.9544C167.268 19.5346 167.835 18.9305 168.211 18.2086H168.264C168.23 18.3758 168.212 18.5459 168.211 18.7166V19.385C168.211 20 168.504 20.3209 169.117 20.3209H169.971C170.097 20.3354 170.224 20.3212 170.344 20.2793C170.464 20.2374 170.573 20.1689 170.663 20.0789C170.752 19.9889 170.821 19.8798 170.862 19.7597C170.904 19.6395 170.918 19.5115 170.904 19.385V9.86632C170.918 9.73991 170.904 9.61185 170.862 9.4917C170.821 9.37155 170.752 9.26242 170.663 9.17244C170.573 9.08247 170.464 9.01398 170.344 8.97208C170.224 8.93019 170.097 8.91597 169.971 8.93049H169.011C168.397 8.93049 168.077 9.25135 168.077 9.86632V14.1444C168.077 16.1765 166.957 17.9947 164.904 17.9947C163.491 17.9947 163.144 17.0588 163.144 15.6685V9.86632C163.158 9.73991 163.144 9.61185 163.103 9.4917C163.061 9.37155 162.992 9.26242 162.903 9.17244C162.813 9.08247 162.704 9.01398 162.584 8.97208C162.464 8.93019 162.337 8.91597 162.211 8.93049H161.251C161.125 8.91597 160.997 8.93019 160.877 8.97208C160.757 9.01398 160.648 9.08247 160.559 9.17244C160.469 9.26242 160.401 9.37155 160.359 9.4917ZM127.384 9.54545C127.379 9.49495 127.384 9.44386 127.401 9.39595C127.418 9.34803 127.445 9.30451 127.481 9.26859C127.517 9.23267 127.56 9.20526 127.608 9.18839C127.656 9.17153 127.707 9.16562 127.757 9.17112H127.944C127.994 9.16562 128.045 9.17153 128.093 9.18839C128.141 9.20526 128.184 9.23267 128.22 9.26859C128.256 9.30451 128.283 9.34803 128.3 9.39595C128.317 9.44386 128.323 9.49495 128.317 9.54545V11.2834C128.318 11.5882 128.291 11.8924 128.237 12.1925H128.291C128.851 10.4813 130.157 9.09091 132.024 9.09091C132.344 9.09091 132.504 9.2246 132.504 9.46524V9.67914C132.504 9.91979 132.291 10.0535 132.024 10.0535C129.517 10.0535 128.344 13.0214 128.344 15.508V19.9465C128.35 19.997 128.344 20.0481 128.327 20.096C128.31 20.1439 128.283 20.1875 128.247 20.2234C128.211 20.2593 128.168 20.2867 128.12 20.3036C128.072 20.3204 128.021 20.3264 127.971 20.3209H127.784C127.734 20.3264 127.683 20.3204 127.635 20.3036C127.587 20.2867 127.544 20.2593 127.508 20.2234C127.472 20.1875 127.445 20.1439 127.428 20.096C127.411 20.0481 127.405 19.997 127.411 19.9465V9.54545H127.384ZM124.984 14.2246C124.984 11.0166 123.358 8.90441 120.452 8.90376C117.599 8.9044 115.04 10.9899 115.04 14.7326C115.04 18.2888 117.627 20.5615 120.773 20.5615C122.122 20.5629 123.43 20.1005 124.48 19.2514C124.517 19.225 124.548 19.1917 124.572 19.1532C124.596 19.1148 124.612 19.072 124.619 19.0273C124.627 18.9826 124.625 18.9369 124.615 18.8928C124.605 18.8486 124.586 18.8069 124.56 18.7701L124.427 18.5829C124.293 18.3957 124.133 18.369 123.92 18.5294C123.037 19.2698 121.924 19.6767 120.773 19.6792C118.187 19.6792 116 17.8342 116 14.5989H124.584C124.635 14.603 124.687 14.5964 124.735 14.5793C124.784 14.5623 124.829 14.5354 124.866 14.5002C124.904 14.4649 124.934 14.4223 124.954 14.3748C124.974 14.3274 124.985 14.2762 124.984 14.2246ZM120.451 9.75937C122.291 9.75937 123.917 10.9893 124.024 13.7166H116.104C116.504 11.0963 118.397 9.75937 120.451 9.75937ZM103.411 9.54544C103.405 9.49494 103.411 9.44385 103.428 9.39593C103.445 9.34802 103.472 9.30449 103.508 9.26857C103.544 9.23265 103.587 9.20525 103.635 9.18838C103.683 9.17151 103.734 9.16561 103.784 9.17111H103.971C104.021 9.16561 104.072 9.17151 104.12 9.18838C104.168 9.20525 104.211 9.23265 104.247 9.26857C104.283 9.30449 104.31 9.34802 104.327 9.39593C104.344 9.44385 104.349 9.49494 104.344 9.54544V10.508C104.345 10.804 104.319 11.0995 104.264 11.3904H104.317C104.317 11.3904 105.224 8.87699 108.317 8.87699C111.304 8.87699 113.117 11.2567 113.117 14.7326C113.117 18.2888 111.037 20.5882 108.184 20.5882C107.361 20.5945 106.555 20.3601 105.863 19.9137C105.172 19.4672 104.625 18.8282 104.291 18.0749H104.237C104.293 18.4016 104.32 18.7327 104.317 19.0642V24.4118C104.323 24.4623 104.317 24.5133 104.3 24.5613C104.283 24.6092 104.256 24.6527 104.22 24.6886C104.184 24.7245 104.141 24.7519 104.093 24.7688C104.045 24.7857 103.994 24.7916 103.944 24.7861H103.784C103.734 24.7916 103.683 24.7857 103.635 24.7688C103.587 24.7519 103.544 24.7245 103.508 24.6886C103.472 24.6527 103.445 24.6092 103.428 24.5613C103.411 24.5133 103.405 24.4623 103.411 24.4118V9.54544ZM108.211 19.6791C110.397 19.6791 112.184 17.861 112.184 14.7326C112.184 11.7112 110.584 9.78608 108.317 9.78608C106.264 9.78608 104.344 11.2299 104.344 14.7326C104.317 17.246 105.704 19.6791 108.211 19.6791ZM101.573 14.0909C101.573 10.9625 99.76 8.66308 96.5333 8.66308C93.12 8.66308 90.7733 11.123 90.7467 14.6524C90.7467 17.8877 93.0933 20.6149 96.8533 20.6149C98.2257 20.6123 99.5681 20.2131 100.72 19.4652C101.227 19.1711 101.307 18.7166 101.04 18.2085L100.773 17.754C100.48 17.2192 100.08 17.1657 99.52 17.4331C98.7894 17.9104 97.9386 18.17 97.0667 18.1818C95.3333 18.1818 93.84 17.1123 93.6533 15.0534H100.587C100.843 15.0509 101.088 14.9495 101.272 14.7702C101.456 14.591 101.564 14.3477 101.573 14.0909ZM96.48 10.8289C97.76 10.8289 98.72 11.7647 98.7733 13.3422H93.7333C94 11.8449 95.04 10.8289 96.48 10.8289ZM85.8373 5.40106C85.8373 4.78608 86.1573 4.46523 86.744 4.46523H87.7333C88.3467 4.46523 88.64 4.81282 88.64 5.40106V16.5508C88.64 17.6738 89.12 17.8609 89.52 17.9144C89.6188 17.9194 89.7155 17.9444 89.8044 17.9878C89.8933 18.0313 89.9725 18.0923 90.0373 18.1672C90.1021 18.2422 90.151 18.3294 90.1813 18.4239C90.2115 18.5183 90.2224 18.6178 90.2133 18.7166V19.4652C90.2133 20.0535 89.9467 20.4278 89.28 20.4278C87.76 20.4278 85.84 20.0267 85.84 16.7647V5.40106H85.8373ZM72.8121 9.49169C72.7704 9.61184 72.7562 9.7399 72.7707 9.86631H72.7973V23.8503C72.7973 24.4652 73.1173 24.7861 73.7307 24.7861H74.6907C75.304 24.7861 75.624 24.4652 75.624 23.8503V19.8396C75.6268 19.5081 75.6 19.177 75.544 18.8503H75.5973C75.5973 18.8503 76.504 20.5882 78.8773 20.5882C81.8374 20.5882 84.0774 18.2353 84.0774 14.6257C84.0774 11.0963 82.0774 8.6631 79.0107 8.6631C78.2786 8.63954 77.5535 8.81313 76.911 9.16581C76.2685 9.51849 75.732 10.0374 75.3573 10.6684H75.304C75.3212 10.5175 75.3301 10.3658 75.3307 10.2139V9.70588C75.3307 9.27807 75.0373 8.93048 74.424 8.93048H73.704C73.5779 8.91596 73.4502 8.93018 73.3304 8.97207C73.2106 9.01397 73.1017 9.08246 73.012 9.17243C72.9222 9.26241 72.8539 9.37154 72.8121 9.49169ZM81.1973 14.6791C81.1973 16.9251 79.8907 18.2086 78.344 18.2086C76.504 18.2086 75.5173 16.4706 75.5173 14.6791C75.5173 12.1658 76.9307 11.0963 78.3973 11.0963C80.0507 11.0963 81.1973 12.5134 81.1973 14.6791ZM65.0667 8.66308C68.5067 8.66308 71.3333 11.1497 71.3333 14.6256C71.3333 18.1016 68.5333 20.5882 65.0667 20.5882C61.6 20.5882 58.8267 18.1283 58.8267 14.6256C58.8267 11.123 61.6 8.66308 65.0667 8.66308ZM65.0667 18.1818C66.9067 18.1818 68.4533 16.7647 68.4533 14.6256C68.4533 12.4866 66.9067 11.0695 65.0667 11.0695C63.2267 11.0695 61.7067 12.5133 61.7067 14.6256C61.7067 16.7379 63.2 18.1818 65.0667 18.1818ZM57.84 14.0909C57.84 10.9625 56.0267 8.66308 52.8 8.66308C49.3867 8.66308 47.04 11.123 47.0133 14.6524C47.0133 17.8877 49.36 20.6149 53.12 20.6149C54.4923 20.6123 55.8348 20.2131 56.9867 19.4652C57.4934 19.1711 57.5734 18.7166 57.3067 18.2085L57.04 17.754C56.7467 17.2192 56.3467 17.1657 55.7867 17.4331C55.056 17.9104 54.2053 18.17 53.3334 18.1818C51.6 18.1818 50.1067 17.1123 49.92 15.0534H56.8534C57.1097 15.0509 57.3552 14.9495 57.5389 14.7702C57.7226 14.591 57.8304 14.3477 57.84 14.0909ZM52.7467 10.8289C54.0267 10.8289 54.9867 11.7647 55.04 13.3422H50C50.2667 11.8449 51.3067 10.8289 52.7467 10.8289ZM34.5573 9.86633C34.5428 9.73992 34.557 9.61186 34.5988 9.49171C34.6406 9.37156 34.7089 9.26243 34.7986 9.17245C34.8884 9.08248 34.9972 9.01399 35.117 8.97209C35.2369 8.9302 35.3646 8.91598 35.4907 8.9305H36.2107C36.824 8.9305 37.1173 9.27809 37.1173 9.7059V10.2139C37.1168 10.3658 37.1079 10.5176 37.0907 10.6685H37.144C37.5189 10.037 38.0558 9.51784 38.6988 9.16514C39.3419 8.81244 40.0674 8.63908 40.8 8.66312C43.8666 8.66312 45.8666 11.0963 45.8666 14.6257C45.8666 18.2353 43.6267 20.5883 40.6667 20.5883C38.2933 20.5883 37.3867 18.8503 37.3867 18.8503H37.3333C37.3893 19.177 37.4161 19.5081 37.4133 19.8396V23.8503C37.4133 24.4653 37.0933 24.7861 36.48 24.7861H35.52C34.9067 24.7861 34.5867 24.4653 34.5867 23.8503V9.86633H34.5573ZM40.1307 18.2086C41.6773 18.2086 42.984 16.9252 42.984 14.6792C42.984 12.5134 41.8373 11.0963 40.184 11.0963C38.7173 11.0963 37.304 12.1658 37.304 14.6792C37.304 16.4706 38.2907 18.2086 40.1307 18.2086Z" fill="white"></path></g><defs><clipPath id="__b7SFT4G__clip0_152_111"><rect width="180" height="29.4118" fill="white"></rect></clipPath></defs></svg></span></a>
+                    </div>
+
+                <div class="Align-Footer">
+                    <div class="footerList">
+                        <h1>Product</h1>
+                        <ul class="footer-List-Elements">
+                            <li> <a href="https://www.peopleperhour.com/about"> About </a></li>
+                            <li> <a href="https://www.peopleperhour.com/team/"> Team </a></li>
+                            <li> <a href="https://www.peopleperhour.com/careers"> Careers </a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footerList">
+                        <h1>Support</h1>
+                        <ul class="footer-List-Elements">
+                            <li> <a href="https://www.peopleperhour.com/how-it-works"> How it works </a></li>
+                            <li> <a href="https://support.peopleperhour.com/hc/en-us/articles/205218157-Trust-and-Safety"> Trust & Safety </a></li>
+                            <li> <a href="https://support.peopleperhour.com/hc/en-us"> Help Centre </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerList">
+                        <h1>Discover</h1>
+                        <ul class="footer-List-Elements">
+                            <li> <a href="https://www.peopleperhour.com/discover/guides/"> Guides </a></li>
+                            <li> <a href="https://www.peopleperhour.com/discover/stories/"> Stories </a></li>
+                            <li> <a href="https://www.peopleperhour.com/discover/news/"> News </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerList">
+                        <h1>Resources</h1>
+                        <ul class="footer-List-Elements">
+                            <li> <a href="https://www.talentdesk.io/"> TalentDesk </a></li>
+                            <li> <a href="https://businesscost.peopleperhour.com/"> Business Cost Calculator </a></li>
+                            <li> <a href="https://www.peopleperhour.com/content/startup-cities/"> Startup Cities</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerList">
+                        <h1>Browse</h1>
+                        <ul class="footer-List-Elements">
+                            <li> <a href="https://www.peopleperhour.com/services/freelance-services/"> Freelance Services </a></li>
+                            <li> <a href="https://www.peopleperhour.com/services/freelance-services-by-country/"> Freelance Services By Country </a></li>
+                            <li> <a href="https://www.peopleperhour.com/hire-freelancers/freelancer-skills/"> Freelance SKills </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div id="lastRow" class="row align-items-center">
+                <ul id="lastElem" class="footer-List-Elements">
+                    <li><small><a href="https://www.peopleperhour.com/static/terms">Terms</a></small></li>
+                    <li><small><a href="https://www.peopleperhour.com/static/privacy-policy">Privacy</a></small></li>
+                    <li><small><a href="https://www.peopleperhour.com/sitemap">Sitemap</a></small></li>
+                    <li><small><a href="https://www.peopleperhour.com/static/company-details">Company Details</a></small></li>
+                    <li><small>© 2024 People Per Hour Ltd</small></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

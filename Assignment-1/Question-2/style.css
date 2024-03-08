@@ -1,6 +1,6 @@
-/* Reset some default browser styles */
+
 * {
-   
+   font-family: 'Roboto Slab', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,72 @@ body {
     color: #333;
 }
 
+section {
+    max-width: 100%;
+}
+
+#main-logo {
+    display: block
+}
+
+.span {
+    font-weight: lighter;
+}
+
+.span1 {
+    color: rgb(52, 168, 202);
+}
+
+.dropList {
+    background-color: #E8EAED;
+    color: rgba(13, 14, 14, 0.818);
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.dropdown {
+    margin-right: 10px;
+}
+
+#navBtn:hover,
+  #navBtn:focus,
+  #navBtn:active {
+    border-color: rgba(52, 168, 202, 0.6);
+    color: rgb(52, 168, 202);
+    background-color: transparent;
+  }
+
+#nvL:hover {
+    color: #FF7300;;
+}
+
+#svgIc {
+    fill: rgb(52, 168, 202);
+  }
+
+#searchSvg {
+    fill: white;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    line-height: 0.2;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+#navBtn {
+    border-color: rgba(52, 168, 202, 0.6);
+    color: rgb(52, 168, 202);
+}
+
+#navBtn a:hover {
+    border-color: rgba(52, 168, 202, 0.6);
+}
+
+
+/* ------------ Starting Area that has Image, searchbar and text ------------ */
 
 .container {
     max-width: 1200px;
@@ -40,87 +106,7 @@ body {
     font-weight: bolder;
     font-size: 80px;
 }
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .stHead h1 {
-        font-size: 40px;
-    }
-}
-
-/* .carouselSec {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.carousel-item {
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .carousel-item img {
-    max-width: 288p;
-    max-height: 216px;
-    margin: 0 auto;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    top: -50px; /* Adjust the vertical position */
-    width: 50px;
-    height: 50px;
-    z-index: 1;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(9, 7, 7, 0.8); /* Control button background color */
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-
-  .carousel-control-prev-icon::before,
-  .carousel-control-next-icon::before {
-    color: black; 
-  }
-
-  .carousel-control-prev {
-    left: -60px; 
-  }
-
-  .carousel-control-next {
-    right: -60px;
-  }
-
-  @media (max-width: 768px) {
-    .carousel-control-prev,
-    .carousel-control-next {
-      top: -30px;
-    }
-
-    .carousel-control-prev {
-      left: -30px; 
-    }
-
-    .carousel-control-next {
-      right: -30px;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      width: 20px;
-      height: 20px;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-  }
   
-  
-
 .mainStuff {
     display: flex;
     justify-content: center;
@@ -138,6 +124,20 @@ body {
     margin-left: 30px;
     margin-top: 10px;
     display: flex;
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.search-components a {
+    text-decoration: none;
+    color: black;
+}
+
+.search-components a:hover {
+    background-color: #e8eaeddd;
+    color: black;
+    border-radius: 6px;
 }
 
 .searchBox {
@@ -198,6 +198,8 @@ body {
     height: auto;
 }
 
+/* ------------ Responsiveness for Mobile Screens ------------ */
+
 @media (max-width: 576px) {
     .stHead h1 {
         font-size: 30px;
@@ -228,11 +230,10 @@ body {
         width: 280px; 
         border-radius: 10px;
         height: 50px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
     }
 
     #searchBtn {
+        display: none;
         width: 60px; 
         color: #B92429;
         border-radius: 10px;
@@ -248,64 +249,208 @@ body {
     
     .search-components {
         flex-wrap: nowrap; 
+        text-decoration: none;
     }
     
     .list-elem {
         font-size: 12px; 
+        aspect-ratio: 6/3;
+        text-align: center;
     }
 }
 
-.hero {
-    background: url('hero-image.jpg') center/cover no-repeat;
-    height: 500px;
+/* ------------ Middle Area with text and image ------------ */
+
+.MidArea {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     color: #fff;
-}
-
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-}
-
-.hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #17a2b8;
-    color: #fff;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #138496;
-}
-
-.how-it-works {
-    background: linear-gradient(115deg, #F5F7FA, #fafbfc, #ffffffec);
     padding: 80px 0;
 }
 
-.how-it-works h1 {
+#midItem h1 {
+    color: black;
+    font-size: 40px;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+}
+
+#midItem ul li {
+    list-style: none;
+    font-size: 18px;
+    color: black;
+    line-height: 2.2em;
+    margin-left: -10px;
+}
+
+#midItem ul li::before {
+    padding-right: 16px;
+    color: #008000;
+    text-align: left;
+    content: '\2713';
+}
+
+.midItemBtn {
+    display: flex;
+    padding: 13px 20px;
+    background-color: #FF7300;
+    height: 48px;
+    color: white;
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: 650;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 46px;
+    margin-left: 22px;
+}
+
+.MidArea img {
+    max-width: 100%;
+}
+
+/* ------------ Responsiveness for Mobile Screens ------------ */
+
+@media (max-width: 768px) {
+    #midItem h1 {
+        font-size: 30px; 
+    }
+
+    #midItem ul li {
+        font-size: 16px; 
+    }
+
+    .midItemBtn {
+        font-size: 14px; 
+    }
+    
+    #midItem img {
+        max-width: 100%; 
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/* ------------ 3rd Container ------------ */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    max-width: 90%;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#card-body {
+    background-color:  #F5F7FA;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0 30px;
+    border: none;
+}
+
+#card-body img {
+    border-radius: 50%;
+}
+
+#svgCard {
+    max-width: 10%;
+}
+
+.card-text {
+    font-size: 20px;
+    text-align: left;
+    color: #000000;
+}
+
+.img-name {
+    color: #000000;
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+    
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .card-container {
+            flex-direction: column;
+            max-width: 100%;
+        }
+    
+        #card-body {
+            width: 100%;
+        }
+    
+        .card-text {
+            font-size: 16px;
+        }
+}
+/* ------------ 2 Containers with text, button and image ------------ */
+
+.how-it-works {
+    background: linear-gradient(115deg, #F5F7FA, #fafbfc, #ffffffec);
+    padding: 30px 0;
+    display: flex;
+}
+
+.three-Points {
+    display: flex;
+    justify-content: space-between; 
+    margin: 0;
+}
+.headTxt {
+    flex: 1; 
+    max-width: 28%; 
+    padding: 20px;
+    text-align: left;
+}
+
+.headTxt h1 {
+   color: #B33C00;
+   font-weight: 430;
+   margin-bottom: 20px;
+}
+
+.headTxt p {
+    font-weight: 270;
+}
+
+@media (max-width: 768px) {
+    .three-Points {
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .headTxt {
+        margin-bottom: 20px;
+    }
+
+    .headTxt h1 {
+        font-size: 32px;
+        font-weight: 370;
+        margin-bottom: 20px;
+     }
+     
+     .headTxt p {
+        font-size: 14px;
+         font-weight: 270;
+     }
 }
 
 .steps {
@@ -420,6 +565,8 @@ body {
     margin-top: 30px;
 }
 
+/* ------------ Responsiveness for Mobile Screens ------------ */
+
 @media (max-width: 768px) {
     .step2, .step1 {
         flex-direction: column;
@@ -471,21 +618,58 @@ body {
     }
 }
 
-.browse-jobs {
-    background-color: #f8f9fa;
-    padding: 80px 0;
-}
 
-.browse-jobs h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
+
+/* Footer Styles */
 
 footer {
-    background-color: #333;
+    background-color: #18202B;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
+}
+
+#footerLogo {
+    max-width: 18%;
+}
+
+.Align-Footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerList {
+    flex: 1;
+    margin-top: 30px;
+}
+
+.footerList h1 {
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    font-weight: 350;
+    margin-bottom: 20px;
+}
+
+.footerList .footer-List-Elements {
+    list-style: none;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 350;
+    margin-left: -30px;
+    line-height: 2.3em;
+    transition: color 0.1992s linear 0s;
+}
+
+
+#lastElem {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 350;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    color: #ABB2C4;
+    flex-wrap: wrap;
 }
 
 footer p {
@@ -493,35 +677,76 @@ footer p {
 }
 
 footer a {
-    color: #fff;
+    color: #ABB2C4;
     text-decoration: none;
 }
 
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
-    
+    .Align-Footer {
+        display: block;
+    }
+}
 
-    .hero {
-        height: 300px;
+
+/* ------------  Logos  ------------ */
+
+#logos img {
+    width: 12%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#logos img:first-child {
+    margin-left: 15px; 
+}
+
+#logos img:last-child {
+    margin-right: 0; 
+}
+
+#cnbc{
+    mix-blend-mode: color-burn;
+}
+
+/* ------------ Responsiveness for Mobile Screens ------------ */
+
+@media (max-width: 768px) {
+    #logos img {
+        width: 36%;
+        margin-right: 4%;
+        margin-left: 4%;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
-    .hero-content {
-        padding: 20px;
+    #logos img:nth-child(2), #logos img:nth-child(4) {
+        width: 22%; 
+        margin-right: 4%;
+        margin-left: 4%;
     }
 
-    .hero-content h1 {
-        font-size: 28px;
+    #logos img:nth-child(3), #logos img:nth-child(5) {
+        width: 22%; 
+        margin-right: 5%;
+        margin-left: 5%;
     }
 
-    .hero-content p {
-        font-size: 16px;
+    #logos img:first-child {
+        width: 30%; 
+        margin-left: 50px;
     }
 
-    .steps {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .step {
-        max-width: 100%;
+    #logos img:last-child {
+        width: 50%; 
+        margin-left: 80px;
     }
 }
