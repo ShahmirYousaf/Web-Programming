@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Leaderboard from './Components/Leaderboard';
 
 function App() {
   return (
     <>
+    <Leaderboard/>
     </>
   );
 }
