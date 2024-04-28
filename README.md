@@ -8,13 +8,13 @@ This repository contains all the assignments for the Web Programming course offe
 ### Assignment1: 
 Assignment 1 comprises three questions:
 
-Resume Creation: Design a professional resume.
-Job Application Form: Develop a job application form.
-Website Page Clone: Replicate a webpage design.
+- **Resume Creation**: Design a professional resume.
+- **Job Application Form**: Develop a job application form.
+- **Website Page Clone**: Replicate a webpage design.
 
 ### Assignment2: 
 Assignment 2 consists of the following tasks:
 
-Uber and Shopify Backend Design: Design the backend systems for Uber's ride-hailing service and Shopify's e-commerce platform.
-Leaderboard Development: Implement a leaderboard with backend functionality.
+- **Uber and Shopify Backend Design**: Design the backend systems for Uber's ride-hailing service and Shopify's e-commerce platform.
+- **Leaderboard Development**: Implement a leaderboard with backend functionality.
 
