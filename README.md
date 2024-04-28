@@ -1,10 +1,10 @@
-##**Web Programming Course Assignments - Spring 2024**
+## **Web Programming Course Assignments - Spring 2024**
 Welcome to the designated folder for your assignments in the Web Programming course for the Spring 2024 semester at FAST NUCES, Lahore!
 
-##**About**
+## **About**
 This repository contains all the assignments for the Web Programming course offered during the Spring 2024 semester. Each assignment is organized into separate folders for clarity and ease of access.
 
-##**Folder Structure**
+## **Folder Structure**
 ### Assignment1: 
 Assignment 1 comprises three questions:
 
