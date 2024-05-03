@@ -18,3 +18,6 @@ Assignment 2 consists of the following tasks:
 - **Uber and Shopify Backend Design**: Design the backend systems for Uber's ride-hailing service and Shopify's e-commerce platform.
 - **Leaderboard Development**: Implement a leaderboard with backend functionality.
 
+### Class-Activity: 
+-BookDetails Page that has search function and a button change view between grid and list.
+
