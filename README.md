@@ -19,5 +19,5 @@ Assignment 2 consists of the following tasks:
 - **Leaderboard Development**: Implement a leaderboard with backend functionality.
 
 ### Class-Activity: 
--BookDetails Page that has a search function and a button to change view between grid and list.
+- **BookDetails Page that has a search function and a button to change view between grid and list.**
 
