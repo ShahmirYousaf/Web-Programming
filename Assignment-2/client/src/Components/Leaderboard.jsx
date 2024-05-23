@@ -19,7 +19,7 @@ const Leaderboard = () => {
     };
 
     fetchLeaderboardData();
-  }, []);
+  }, [leaderboardData]);
 
   return (
     <div className="leaderboard-container">
